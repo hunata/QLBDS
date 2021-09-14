@@ -22,12 +22,13 @@ public class HinhChuNhat extends Hinh {
         chieuRong = sc.nextDouble();
 
         System.out.println("Nhập vào điểm trái trên: ");
+        topLeft = Diem.formConsoleDiem();
     }
 
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Hình chữ nhật:\n");
-        sb.append("- Điểm trái trên: "). append(topLeft.formConsoleDiem());
+        sb.append("- Điểm trái trên: "). append(topLeft);
         sb.append("- Chiều dài = ").append(chieuDai);
         sb.append(", Chiều rộng = ").append(chieuRong);
         sb.append('\n');

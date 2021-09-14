@@ -2,16 +2,9 @@ package entities;
 
 import java.util.Scanner;
 
-public class Hinh {
-
-
-    public Hinh() {
-    }
-    public void formConsole(Scanner sc){
-
-    }
-public double calculator(){
-        return 0;
+public abstract class Hinh {
+    public abstract void formConsole(Scanner sc);
+    public abstract double calculator();
 }
 
-}
+

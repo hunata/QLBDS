@@ -14,19 +14,20 @@ public class App {
         int n = Integer.parseInt(sc.nextLine());
         Hinh[] list = new Hinh[n];
         for (int i = 0; i < n; i++) {
-            System.out.format("mảnh đất thứ %d", i + 1);
-            System.out.format("- Loại Mảnh: 0 Hình chữ nhật, 1 Hình vuông, 2 Hình tròn, 3 Hinh tam giác \n");
-            int type = Integer.parseInt(sc.nextLine());
-            if (type == 0) {
-                list[i] = new HinhChuNhat();
-
-            } else if (type == 1) {
-                list[i] = new HinhVuong();
-            } else if (type == 2) {
-                list[i] = new HinhTron();
-            } else {
-                list[i] = new HinhTamGiac();
-            }
+            System.out.format("Mảnh đất thứ %d", i + 1);
+            System.out.format("- Loại : 0 - Hình chữ nhật, 1 - Hình vuông, 2 - Hình tròn, 3 - Hình tam giác \n");
+//            int type = Integer.parseInt(sc.nextLine());
+            int type = sc.nextInt();
+//            if (type == 0) {
+//                list[i] = new HinhChuNhat();
+//            } else if (type == 1) {
+//                list[i] = new HinhVuong();
+//            } else if (type == 2) {
+//                list[i] = new HinhTron();
+//            } else {
+//                list[i] = new HinhTamGiac();
+//            }
+            list[i] = createHinh(type);
             list[i].formConsole(sc);
         }
         for (Hinh h : list) {
@@ -38,5 +39,23 @@ public class App {
             total += pricePerUnit * s.calculator();
         }
         System.out.println("Tổng tiền: " + total);
+    }
+    private static Hinh createHinh(int type) {
+        switch (type) {
+            case 1:
+                return new HinhChuNhat();
+
+            case 2:
+                return new HinhVuong();
+
+            case 3:
+                return new HinhTron();
+
+            case 4:
+                return new HinhTamGiac();
+
+            default:
+                return null;
+        }
     }
 }

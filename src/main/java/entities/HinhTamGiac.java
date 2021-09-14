@@ -12,6 +12,10 @@ public class HinhTamGiac extends Hinh {
     }
 
     @Override
+    public void formConsole(Scanner sc) {
+    }
+
+    @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Hinh Tam Giác: \n");
         sb.append("Điểm d1: ").append(d1);

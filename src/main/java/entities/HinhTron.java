@@ -23,6 +23,7 @@ public class HinhTron extends Hinh{
         banKinh = sc.nextDouble();
 
         System.out.println("Nhập vào điểm trung tâm: ");
+        Diem.formConsoleDiem();
     }
 
     @Override
