@@ -15,7 +15,7 @@ public class App {
         Hinh[] list = new Hinh[n];
         for (int i = 0; i < n; i++) {
             System.out.format("Mảnh đất thứ %d", i + 1);
-            System.out.format("- Loại : 0 - Hình chữ nhật, 1 - Hình vuông, 2 - Hình tròn, 3 - Hình tam giác \n");
+            System.out.format("- Loại : 1 - Hình chữ nhật, 2 - Hình vuông, 3 - Hình tròn, 4 - Hình tam giác \n");
 //            int type = Integer.parseInt(sc.nextLine());
             int type = sc.nextInt();
 //            if (type == 0) {
